@@ -26,3 +26,11 @@
 # Output: "example good a"
 # Explanation: You need to reduce multiple spaces between two words to a single
 #  space in the reversed string.
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        output = []
+        s_list = s.split()
+        for word in s_list:
+            output.insert(0, word)
+        return " ".join(output)
