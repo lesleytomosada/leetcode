@@ -25,6 +25,7 @@ class Solution:
     def containsDuplicate(self, nums):
         return len(set(nums)) != len(nums)
 
+
 class Solution2:
     def containsDuplicate(self, nums):
         visited = {}

@@ -46,3 +46,23 @@ class Solution:
         answer.append(list(not_in_2))
 
         return answer
+
+
+class Solution2:
+    def findDifference(self, nums1, nums2):
+        answer = []
+        not_in_2 = set()
+        not_in_1 = set()
+
+        for num in set(nums1):
+            if num not in nums2:
+                not_in_2.add(num)
+
+        for num in set(nums2):
+            if num not in nums1:
+                not_in_1.add(num)
+
+        answer.append(not_in_2)
+        answer.append(not_in_1)
+
+        return answer
